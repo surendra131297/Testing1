@@ -1,0 +1,34 @@
+<template>
+
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-Item padding="horizontal-medium">
+            <lightning-layout>
+                <!--Coloumn 1-->
+                <lightning-layout-Item  padding="horizontal-medium" size="6">
+                    <p>{appdecs}</p>
+                </lightning-layout-Item>
+                <!--Coloumn 2-->
+                <lightning-layout-Item padding="horizontal-medium" size="6">
+                     <lightning-layout vertical-align="center">
+                        <lightning-layout-Item padding="slds-var-m-around_medium around_small" size="12">
+                 <div class="slds-p-around_small">
+                 <lightning-combobox name="Select Partner Type" label="Status" value={value} placeholder="Select Partner Type" options={partnerTypes} onchange={handleChange} ></lightning-combobox>
+                        
+                 </div>
+                                
+                 <div class="slds-p-around_x-small slds-align_absolute-center" >
+                     <lightning-button-icon icon-name="action:add_relationship" variant="brand" alternative-text="Add New Partner Type" title="Add New Partner Type" onclick={openNewPartnertypestdpage}></lightning-button-icon>
+                     <lightning-button-icon icon-name="action:add_relationship" variant="brand" alternative-text="Add New Account" title="Add New Account" class="slds-var-m-left_medium" onclick={openNewPartnerAccountstdpage}></lightning-button-icon>
+                     <lightning-button-icon icon-name="action:add_relationship" variant="brand" alternative-text="Add New Partner Contact" title="Add New Partner Contact" class="slds-var-m-left_medium" onclick={openNewPartnerContactstdpage}></lightning-button-icon>
+                 </div>
+                        </lightning-layout-Item>
+                     </lightning-layout>
+                </lightning-layout-Item>
+            </lightning-layout>
+
+        </lightning-layout-Item>
+
+    </lightning-layout>
+   
+
+</template>

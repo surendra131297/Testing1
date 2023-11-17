@@ -1,0 +1,25 @@
+<apex:page controller="search_SalesASS" renderAs="{!if($CurrentPage.parameters.isPdf == null, null, 'pdf')}" id="myPage" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <!--<apex:inputText value="{!searchbox}"label="Search"/>-->
+                <apex:inputText value="{!searchbox1}" label="Search" />
+                <apex:commandButton value="Search" action="{!getSales}"/>
+                </apex:pageBlockSection>
+                <apex:pageblockTable value="{!result}" var="a">
+                    <apex:column Value="{!a.Emp_Id__c}"/>
+                <apex:column value="{!a.Emp_Name__c}" />
+                <apex:column value="{!a.Email__c}"/>
+                <apex:column value="{!a.CompletionDate__c}"/>
+                <apex:column value="{!a.Assesment_Year__c}"/>
+                <apex:column value="{!a.Status__c}"/>
+                <apex:column value="{!a.Employee_Comments__c}"/>
+                </apex:pageblockTable>
+                <apex:commandLink action="/apex/Sales_Employee?isPdf=true" target="_blank" style="border-bottom:1px solid #000">
+<apex:commandButton value="Generate Pdf"/>
+</apex:commandLink>
+
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

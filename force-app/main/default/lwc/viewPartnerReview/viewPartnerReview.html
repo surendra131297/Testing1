@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Reviews for Partner">
+        <lightning-layout multiple-rows>
+            <template if:true={partnerReviewsFound}>
+                <lightning-layout-item padding="around-small" size="12" small-device-size="12" large-device-size="12" medium-device-size="12">
+                    <div>
+                        <lightning-tile label={partner.CreatedBy.Name} type="media">
+                            <lightning-avatar src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg"></lightning-avatar>
+                        </lightning-tile>
+                        <ul>
+                            <li ><span style="font-weight: bold;"> Business Quality :  </span>{partner.Partner_Quality__c}</li>
+                            <li ><span style="font-weight: bold;"> Partner Business Rating :  </span>{partner.Partner_Business_Planning__c}</li>
+                            <li ><span style="font-weight: bold;"> Overall Rating :  </span>{partner.Overall_Rating__c}</li>
+                            
+                        </ul>
+                        <ul class="slds-list_vertical-space-medium slds-has-inline-block-links_space slds-align_absolute-center">
+                            <li class="slds-item">{partner.Overall_Feedback__c}</li>
+                        </ul>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12" small-device-size="12" large-device-size="12" medium-device-size="12">
+                   
+                    <div class="slds-p-around_medium  slds-align_absolute-center lgc-bg">
+                        <lightning-button-icon icon-name="utility:arrow_left"  alternative-text="Previous Review" title="Previous Review" onclick={navigatePreviousReview}></lightning-button-icon>
+                        <lightning-button-icon icon-name="utility:arrow_right"  alternative-text="Next Review" title="Next Review" onclick={navigateNextReview} class="slds-m-left_xx-small"></lightning-button-icon>
+                     
+                    </div>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+</template>

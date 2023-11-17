@@ -1,0 +1,368 @@
+<template>
+
+    <header data-f6-region="">
+
+
+
+
+<div class="community_byo-scoped-header-and-footer__header-content">
+
+
+
+
+<section data-component-id="section-a7dc" slot="header" class="community_layout-section_section-host">
+
+
+
+
+<div class="background-image community_layout-section_section"></div>
+
+
+
+
+<div class="background-image-overlay community_layout-section_section"></div>
+
+
+
+
+<div class="community_layout-section_section columns-content">
+
+
+
+
+<div class="community_layout-column_column column-content">
+
+
+
+
+<text data-component-id="textBlock-51a6" slot="column">
+
+
+
+
+<h2 class="dxp-text-heading-large slds-p-vertical_none slds-p-horizontal_none dxp-text-block"
+
+
+
+
+style="color: rgba(255, 255, 255, 0.89); text-align: center; background-color: rgba(4, 53, 106, 0.78); font-weight: bold;">
+
+
+
+
+Case Feedback Survey</h2>
+
+</text>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+</div>
+
+</header>
+
+      <!-- <lightning-button variant="base" label="Case Details" title="titleName" onclick={handleClick}></lightning-button> -->
+
+      <article class="card">
+
+          
+
+              <template if:false={submitted}>
+
+       <div style="margin-left:3%; width: 30%;margin-top: 1%;">
+
+       <strong> <p>Case Number</p></strong>
+
+       <input
+
+       name="caseNumber"
+
+       value={caseNumber}
+
+       readonly
+
+       onchange={handleChange6}
+
+      
+
+       ></input>
+
+   </div>
+
+   <!-- Other form elements go here -->
+
+   <div style="margin-left:3%;margin-top: 2%;">
+
+   <strong><p required>1. Communication from our Representative?</p></strong>
+
+
+
+       <lightning-radio-group  name="radioButtonGroup"
+
+                               onchange={handleChange}
+
+                               options={RepresentativeCommunicate__c}
+
+                               value={value}
+
+                              
+
+                               type="radio"></lightning-radio-group>
+
+  
+
+       <br/>
+
+       <!-- <div if:true={value}>
+
+           Selected Vlaue: <b>{value} </b>
+
+       </div> -->
+
+   </div>
+
+   <div style="margin-left:3%;">
+
+       <strong><p>2. Rate your experience Service performed</p></strong>
+
+  
+
+       <lightning-radio-group
+
+                               name="radioButtonGroup1"
+
+                               onchange={handleChange1}
+
+                               options={ServiceRating__c}
+
+                               value={value1}
+
+                              
+
+                               type="radio"></lightning-radio-group>
+
+  
+
+       <br/>
+
+       <!-- <div if:true={value2}>
+
+           Selected Vlaue: <b>{value2}</b>
+
+       </div> -->
+
+       </div>
+
+       <div style="margin-left:3%;">
+
+           <strong><p>3. How our Representative interact with you?</p></strong>
+
+        
+
+               <lightning-radio-group
+
+                                      
+
+                                       name="radioButtonGroup2"
+
+                                       onchange={handleChange2}
+
+                                       options={RepresentativeNature__c}
+
+                                       value={value2}
+
+                                      
+
+                                       type="radio"></lightning-radio-group>
+
+          
+
+               <br/>
+
+       </div>
+
+       <div style="margin-left:3%;">
+
+        <strong><p>3. How Representative understand issue instruct?</p></strong>
+
+     
+
+            <lightning-radio-group
+
+                                   
+
+                                    name="radioButtonGroup2"
+
+                                    onchange={handleChange3}
+
+                                    options={RepresentativeUnderstanding__c}
+
+                                    value={value3}
+
+                                   
+
+                                    type="radio"></lightning-radio-group>
+
+       
+
+            <br/>
+
+    </div>
+
+    <div style="margin-left:3%;">
+
+        <strong><p>3. Did you Satisfied are you with our Services?</p></strong>
+
+     
+
+            <lightning-radio-group
+
+                                   
+
+                                    name="radioButtonGroup2"
+
+                                    onchange={handleChange4}
+
+                                    options={OutcomeSatisfaction__c}
+
+                                    value={value4}
+
+                                   
+
+                                    type="radio"></lightning-radio-group>
+
+       
+
+            <br/>
+
+    </div>
+
+
+ 
+
+        <div style="margin-left:3%;">
+
+       <strong> <p>Any comments or suggestions (optional):</p></strong>
+
+       <div class="slds-size_1-of-2">
+
+       <lightning-textarea
+
+       name="feedback"
+
+       value={feedback}
+
+       onchange={handleChange5}
+
+     ></lightning-textarea>
+
+   </div>
+
+   </div>
+  
+
+  
+
+
+
+
+
+   <div class="slds-m-top_medium slds-m-bottom_x-large" style="margin-left:3%;">
+
+      
+
+          
+
+          
+
+           <strong style="margin-left:3%;"> <p>Overall Rating</p></strong>
+
+
+
+
+               <div class="rate">
+
+                   <input type="radio" id="star5" name="Rating" value="5" onchange={rating} />
+
+                   <label for="star5" title="text">5 stars</label>
+
+                   <input type="radio" id="star4" name="Rating" value="4" onchange={rating} />
+
+                   <label for="star4" title="text">4 stars</label>
+
+                   <input type="radio" id="star3" name="Rating" value="3" onchange={rating} />
+
+                   <label for="star3" title="text">3 stars</label>
+
+                   <input type="radio" id="star2" name="Rating" value="2" onchange={rating} />
+
+                   <label for="star2" title="text">2 stars</label>
+
+                   <input type="radio" id="star1" name="Rating" value="1" onchange={rating} />
+
+                   <label for="star1" title="text">1 star</label>
+
+                  
+
+               </div>
+
+          
+
+
+
+
+      
+
+   </div>
+
+</br> </br></br>
+
+   <div style="margin-left:17%;">
+
+       <button class="btn1" variant="brand" style="font-weight: 500;border-radius: 4px;width: 66%;background-color: rgba(4, 53, 106, 0.86);border: aqua;color: white;font-family: emoji;padding-bottom: 0px;font-size: 22px;" label="Submit" onclick={handleSubmit}>Submit  feedback</button>        
+
+     </div>
+
+
+
+
+          </template>
+
+
+
+
+        
+
+         <template if:true={submitted}>
+
+           <div style="font-size: 35px; color: rgb(233, 151, 44); text-align: center;">
+
+              Thanks For Submitting The Feedback.....
+
+              </div>
+
+          </template>
+
+          <template if:false={show}>
+
+           <div style="font-size: 35px; color: rgb(233, 151, 44); text-align: center;">
+
+               You Have Already Submitted The Feedback.....
+
+           </div>
+
+          </template>
+
+      </article>
+
+
+
+
+
+</template>

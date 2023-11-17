@@ -1,0 +1,15 @@
+<template>
+    <template if:true={checkUserProfile}>
+    <lightning-card title="Sales Assesment" >
+        
+
+        <div class="slds-p-horizontal_small  background: red">
+
+            <lightning-record-form object-api-name="sale1_Assessment__c" record-id={strRecordId} 
+                            columns="2" mode="edit" fields={arrayFields}></lightning-record-form>
+
+        </div>
+
+    </lightning-card>
+    </template>
+</template>

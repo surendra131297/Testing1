@@ -1,0 +1,154 @@
+<template>
+    <lightning-card>
+        <div style="margin-left:3%; width: 30%;margin-top: 1%;">
+
+            <strong> <p>Case Number</p></strong>
+     
+            <input
+     
+            name="caseNumber"
+     
+            value={caseNumber}
+     
+            readonly
+     
+            onchange={handleChange6}
+     
+           
+     
+            ></input>
+     
+        </div>
+     <div style="margin-left:3%;">
+     <strong><p>1. Communication from our Representative</p></strong>
+   
+         <lightning-radio-group 
+                                 name="radioButtonGroup" 
+                                 onchange={handleChange} 
+                                 options={options}
+                                 value={value}
+                                
+                                 type="radio"></lightning-radio-group>
+     
+         <br/>
+         <!-- <div if:true={value}>
+             Selected Vlaue: <b>{value}</b>
+         </div> -->
+     </div>
+     <div style="margin-left:3%;">
+         <strong><p>2. Rate your experience Service performed</p></strong>
+     
+         <lightning-radio-group 
+                                 name="radioButtonGroup1" 
+                                 onchange={handleChange1} 
+                                 options={options1}
+                                 value={value1}
+                                 
+                                 type="radio"></lightning-radio-group>
+     
+         <br/>
+         <!-- <div if:true={value2}>
+             Selected Vlaue: <b>{value2}</b>
+         </div> -->
+         </div>
+         <div style="margin-left:3%;">
+             <strong><p>3. How our Representative interact with you?</p></strong>
+           
+                 <lightning-radio-group 
+                                         name="radioButtonGroup2" 
+                                         onchange={handleChange2} 
+                                         options={options2}
+                                         value={value2}
+                                         type="radio"></lightning-radio-group>
+             
+                 <br/>
+         </div>
+         <div style="margin-left:3%;">
+             <strong><p>4. How Representative understand issue instruct?</p></strong>
+           
+                 <lightning-radio-group 
+                                         name="radioButtonGroup3" 
+                                         onchange={handleChange3} 
+                                         options={options3}
+                                         value={value3}
+                                         type="radio"></lightning-radio-group>
+             
+                 <br/>
+         </div>
+         <div style="margin-left:3%;">
+             <strong><p>5. Did you Satisfied are you with our Services?</p></strong>
+           
+                 <lightning-radio-group 
+                                         name="radioButtonGroup4" 
+                                         onchange={handleChange4} 
+                                         options={options4}
+                                         value={value4}
+                                         type="radio"></lightning-radio-group>
+             
+                 <br/>
+         </div>
+         <div style="margin-left:3%;">
+         <strong> <p>Leave us a comment (optional):</p></strong>
+         <div class="slds-size_1-of-2">
+         <lightning-textarea
+         name="feedback"
+         value={feedback}
+         onchange={handleChange5}
+       ></lightning-textarea>
+     </div>
+     </div>
+ 
+ 
+     <div class="slds-m-top_medium slds-m-bottom_x-large" style="margin-left:3%;">
+         
+            
+            
+             <strong style="margin-left:3%;"> <p>Rate Us</p></strong> 
+ 
+                 <div class="rate">
+                     <input type="radio" id="star5" name="Rating" value="1" onchange={rating} />
+                     <label for="star5" title="text">5 stars</label>
+                     <input type="radio" id="star4" name="Rating" value="2" onchange={rating} />
+                     <label for="star4" title="text">4 stars</label>
+                     <input type="radio" id="star3" name="Rating" value="3" onchange={rating} />
+                     <label for="star3" title="text">3 stars</label>
+                     <input type="radio" id="star2" name="Rating" value="4" onchange={rating} />
+                     <label for="star2" title="text">2 stars</label>
+                     <input type="radio" id="star1" name="Rating" value="5" onchange={rating} />
+                     <label for="star1" title="text">1 star</label>
+                     
+                 </div>
+             
+ 
+         
+     </div>
+  </br> </br></br>
+     <div style="margin-left:37%;">
+         <lightning-button class="btn1" variant="brand" label="Submit" onclick={handleSubmit}></lightning-button>         
+    <!--   &nbsp; 
+         <lightning-button class="btn1" variant="brand"  label="Skip Survey" onclick={skip}></lightning-button> -->
+       </div>   
+    
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </lightning-card>
+ 
+ 
+ 
+ </template>

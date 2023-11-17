@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Marketing Employee">
+        <div clas="slds-var-m-around_medium">
+            <lightning-input label="Enter Applicant Name" value={searchstring} onchange={handlesearch}></lightning-input>
+
+            <template if:true={Marketing.data}> 
+            <template for:each={Marketing.data} for:item="Market1">
+                <p key={Market1.Id}> {Market1.Emp_Name__c} {Market1.Employee_Id__c} {Market1.Email__c}  {Market1.Completiondate__c} {Market1.Status__c}</p>
+            </template>
+        </template>
+        </div>
+       
+    </lightning-card>
+
+</template>

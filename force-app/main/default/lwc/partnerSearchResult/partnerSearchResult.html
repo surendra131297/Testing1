@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout multiple-rows horizontal-align="center">
+        <template if:true={isPartnerfound}>
+        <template for:each={partnerDataFromDB} for:item="partner">
+            <lightning-layout-item key={partner.Id} padding="small" size="12" small-device-size="6" large-device-size="3" medium-device-size="4">
+                <c-partner-card partner-account={partner} selected-partner-account-id={selectedPartnerCardAccountId} onpartnerselect={selectedPartnerHandler}></c-partner-card>
+            </lightning-layout-item>
+        </template>
+    </template>
+    
+    <template if:false={isPartnerfound}>
+        <p>No Partners Found</p>
+    </template>
+    </lightning-layout>
+    
+        
+    </template>

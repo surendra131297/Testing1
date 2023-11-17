@@ -1,0 +1,55 @@
+<template>
+    <!-- <template if:true={checkUserSalesProfile}> -->
+         <lightning-card >
+        <div class="slds-form-element" style="margin-top: 10px; " >
+                <div class="slds-form-element__control" style="padding-left :350px;" >
+                    <lightning-combobox id="assessmentYearSelect" label="Assessment Year" value={selectedAssessmentYearId} options={assessmentYearOptions} onchange={handleAssessmentYearChange} placeholder="Select Assessment Year" style="width: 40%; background-color: #4CAF50;"></lightning-combobox>
+                </div>
+            </div>
+            </lightning-card>
+
+            <lightning-layout>
+<lightning-layout-item size="3">
+        <lightning-card title="Milestone Buttons">
+          <div class="slds-grid slds-grid_vertical">
+                <template for:each={salesButtonNames} for:item="button2">
+                    <lightning-button key={button2.Id} value={button2.Id} label={button2.Name} onclick={handleButtonClick} class="slds-p-around_medium" style=" color: white; padding: 10px 20px;  text-decoration: none; display: inline-block; font-size: 16px; margin: 10px 0; cursor: pointer; border: none; border-radius: 5px;"></lightning-button>
+                </template>
+            </div>
+        </lightning-card>
+        </lightning-layout-item>
+    <!-- </template> -->
+<lightning-layout-item size="8">
+    <template if:true={showForm}>
+        <lightning-card >
+        <div class="slds-grid slds-gutters">
+            <template for:each={milest} for:item="milestone" for:index="index">
+                <lightning-layout key={milestone.Id} multiple-rows style="padding-left:30px;">
+                    <lightning-layout-item size="12">
+                        <!-- Milestone -->
+                        <lightning-input label={milestone.Id} data-id={milestone} value={milestone.value} disabled style="width: 100%; margin-bottom: 10px;"></lightning-input>
+                        <!-- Rating -->
+                         <lightning-combobox
+                label="Rating"
+                name={milestone.Id}
+                value={rating}
+                options={ratingPicklistValues}
+                onchange={handleRatingChange} 
+                style="width: 100%; margin-bottom: 10px;" >
+            </lightning-combobox>
+                        <!-- <lightning-input label="Rating" type="number" name={milestone.Id} onchange={handleRatingChange}></lightning-input> -->
+                        <!-- Comments -->
+                        <lightning-textarea label="Comment" type="textarea"  name={milestone.Id} onchange={handleCommentsChange} style="width: 100%; margin-bottom: 10px;"></lightning-textarea>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </div>
+
+     
+
+        <lightning-button label="Submit" variant="Brand" onclick={submitAssessment} style=" color: white; padding: 10px 20px;padding-left :350px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 10px 0; cursor: pointer; border: none; border-radius: 5px;"></lightning-button>
+    </lightning-card>
+    </template>
+     </lightning-layout-item>
+        </lightning-layout>
+</template>

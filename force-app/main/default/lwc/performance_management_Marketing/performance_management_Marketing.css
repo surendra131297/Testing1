@@ -1,0 +1,13 @@
+.my-card {
+    background-color: #4CAF50;
+    color: rgb(241, 120, 21);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}

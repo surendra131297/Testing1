@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Create Technical Assesment"  collapsible="True">
+
+        <div class="slds-p-horizontal_small ,background: red">
+
+            <lightning-record-form object-api-name="Technical_Assessment__c" record-id={strRecordId} 
+                            columns="2" mode="edit" fields={arrayFields}></lightning-record-form>
+
+        </div>
+
+    </lightning-card>
+</template>

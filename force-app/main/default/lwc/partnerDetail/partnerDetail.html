@@ -1,0 +1,35 @@
+<template>
+    <template if:true={isPartnerSelected}>
+    <lightning-card title="Partner Detail" icon-name="utility:anchor" >
+        <div slot="actions">
+            <lightning-button label="Add Partner Review" class="slds-var-p-horizontal_small" variant="success" onclick={OpenPartnerReviewScreenFlow}></lightning-button>
+            <lightning-button label="Partner POC Contact Location" class="slds-var-p-horizontal_small" variant="success" onclick={OpenContactLocation}></lightning-button>
+        </div>
+        <div class="slds-box">
+            <lightning-record-view-form object-api-name={objectApi} record-id={selectedPartnerAccountId} >
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name={accountName}></lightning-output-field>
+                        <lightning-output-field field-name={accContractStartDate}></lightning-output-field>
+                        <lightning-output-field field-name={primarypoc}></lightning-output-field>
+                        <lightning-output-field field-name={budget}></lightning-output-field>
+                        <lightning-output-field field-name={salesRevenue}></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name={activepipeline}></lightning-output-field>
+                        <lightning-output-field field-name={contractEnd}></lightning-output-field>
+                        <lightning-output-field field-name={totalTrained}></lightning-output-field>
+                        <lightning-output-field field-name={partnerLatittude}></lightning-output-field>
+                    </div>
+                </div>
+               
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+
+    <template if:true={showLocation}>
+        <!--Show Partner POC Location on Map-->
+        <c-partner-contact-location partner-account-id={selectedPartnerAccountId}></c-partner-contact-location>
+    </template>
+</template>
+</template>

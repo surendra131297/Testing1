@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Technical Employee">
+        <div clas="slds-var-m-around_medium">
+            <lightning-input label="Enter Applicant Name" value={searchstring} onchange={handlesearch}></lightning-input>
+
+            <template if:true={tech.data}> 
+            <template for:each={tech.data} for:item="tech1">
+                <p key={tech1.Id}> {tech1.Emp_Name__c} {tech1.Emp_Id__c} {tech1.Email__c}  {tech1.Completion_Date__c} {tech1.Status__c}</p>
+            </template>
+        </template>
+        </div>
+       
+    </lightning-card>
+
+</template>

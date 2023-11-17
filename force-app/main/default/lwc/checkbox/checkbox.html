@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title = "Employee Selections">
+        <lightning-layout>
+            <lightning-layout-item size = "5">
+    <lightning-input type = "checkbox" label = "Company Location" onchange={displayHandler}></lightning-input>
+    <template if:true={display}>
+       <c-companylocation></c-companylocation>
+    </template>
+   
+</lightning-layout-item>
+<lightning-layout-item size = "5">
+    <lightning-input type = "checkbox" label = "Employee Designation" onchange={displayHandler1}></lightning-input>
+ <template if:true={display1}>
+     
+ </template>
+</lightning-layout-item>
+<lightning-layout-item size = "5">
+    <lightning-input type = "checkbox" label = "Employee Status" onchange={displayHandler2}></lightning-input>
+    <template if:true={display3}>
+        
+    </template>
+</lightning-layout-item>
+<lightning-layout-item size = "2">
+    <lightning-input type = "checkbox" label = "Wissen COE" onchange={displayHandler3}></lightning-input>
+</lightning-layout-item>
+<lightning-layout-item size = "2">
+    <lightning-input type = "checkbox" label = "Employee Category" onchange ={displayHandler4}></lightning-input>
+</lightning-layout-item>
+<lightning-layout-item size = "2">
+    <lightning-input type = "checkbox" label = "Employee Experience" onchange={displayHandler5}></lightning-input>
+</lightning-layout-item>
+
+
+
+
+</lightning-layout>
+</lightning-card>
+</template>

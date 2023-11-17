@@ -1,0 +1,4 @@
+<template>
+    <input type="file" accept="image/*" onchange={handleImageUpload} />
+    <img if:true={imageData} src={imageData} alt="Image Preview" />
+</template>

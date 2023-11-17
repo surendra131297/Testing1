@@ -1,0 +1,59 @@
+/* CSS for the outer container */
+.slds-grid {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the Milestone Buttons card */
+.lightning-card {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Styling for the Milestone button */
+lightning-button {
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Styling for the Milestone input, combobox, and textarea */
+lightning-input, lightning-combobox, lightning-textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Styling for the Assessment Year Combobox */
+.slds-combobox {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Styling for the Submit button */
+lightning-button[label="Submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Hover effect for the Submit button */
+lightning-button[label="Submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Active/focus effect for the Submit button */
+lightning-button[label="Submit"]:active, lightning-button[label="Submit"]:focus {
+    background-color: #4CAF50;
+    outline: none;
+}
